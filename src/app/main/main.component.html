@@ -1,0 +1,17 @@
+<h1
+  [style.color]="
+    newsItems.activatedItem ? newsItems.activatedItem.color : 'purple'
+  "
+>
+  News Title
+</h1>
+
+<div class="newsboard">
+  <app-news-box
+    *ngFor="let item of newsItems.newsItems"
+    [newsItem]="item"
+    [activated]="newsItems.activatedItem === item"
+    (activatedNow)="updateActivatedItem($event)"
+  >
+  </app-news-box>
+</div>

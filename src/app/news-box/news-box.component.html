@@ -1,0 +1,18 @@
+<div
+  class="newsBox"
+  [style.border-color]="activated ? newsItem.color : 'transparent'"
+  [style.border-style]="'solid'"
+  [style.color]="'black'"
+  [style.padding]="'5px'"
+>
+  <h3>{{ newsItem?.title }}</h3>
+  <p>{{ newsItem?.author }}</p>
+  <p>{{ newsItem?.content }}</p>
+  <button
+    [style.background-color]="newsItem.color"
+    [style.color]="'white'"
+    (click)="onClick()"
+  >
+    {{ newsItem?.color }}
+  </button>
+</div>
